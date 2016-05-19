@@ -1,2 +1,1 @@
-import comment from './comments/comment';
-comment();
+import app from './app.module';
