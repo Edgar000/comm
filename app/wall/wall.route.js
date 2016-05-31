@@ -7,6 +7,9 @@ export default function ($stateProvider) {
             url: "/wall",
             templateUrl: templateUrl,
             controller: WallController,
-            controllerAs: 'wallCtrl'
+            controllerAs: 'wallCtrl',
+            resolve: {
+                comments: wallResource => wallResource.getComments()
+            }
         })
 }
