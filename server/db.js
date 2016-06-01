@@ -1,9 +1,4 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
 const mongoose = require('mongoose');
-
-app.use(cors());
 
 mongoose.connect('mongodb://localhost/testdb');
 
@@ -21,18 +16,7 @@ const comment = new Comments({
     date: '12.12',
     content: 'comment text'
 });
-
 comment.save(function (err) {
     if (err) return console.error(err);
     console.log('comment saved');
-});
-
-app.get('/api/comments', (req, res) => {
-    Comments.find(function(err, Comments) {
-        res.json(Comments)
-    })
-});
-
-app.listen(3000, () => {
-    console.log('App listening on port 3000!');
 });
