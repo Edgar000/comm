@@ -18,5 +18,7 @@ const comment = new Comments({
 });
 comment.save(function (err) {
     if (err) return console.error(err);
-    console.log('comment saved');
+    console.log('comment saved to db');
 });
+
+module.exports = Comments;
