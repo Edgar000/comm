@@ -8,7 +8,6 @@ module.controller('newCommentController', ['$scope', function($scope) {
     $scope.saved = {};
     $scope.save = function(comment) {
         $scope.saved = angular.copy($scope.comment);
-        $scope.saved = angular.copy()
     };
 }]);
 

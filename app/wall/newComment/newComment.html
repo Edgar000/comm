@@ -1,7 +1,7 @@
 <div>
     newComment
 </div>
-<div ng-controller="newCommentController">
+<div ng-controller="newCommentController as comment">
     <form novalidate class="comment-form">
         Name: <input type="text" ng-model="comment.name" /><br />
         Comment: <input type="text" ng-model="comment.content" /><br />
